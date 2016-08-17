@@ -45,7 +45,9 @@ app.controller('sheetsController', ['$scope', 'dataLoaderService', 'resultServic
         resultService.setPromise(promise);
 
         promise.then(function(response) {
-            $scope.sheets = filterByCategory(response.data);
+            $scope.sheets = filterByCategory(response.data.sort(function(a, b) {
+                return b.id - a.id
+            }));
             $scope.pages = [];
             var pages = Math.ceil($scope.sheets.length / $scope.pageSize);
             for (var i = 0; i < pages; i++) {

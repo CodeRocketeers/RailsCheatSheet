@@ -1,7 +1,8 @@
 [
     {
+        "id": 1,
         "title": "Let Webrick (RoR server) serve static files",
-        "content": "<p>You can use webrick to serve static files like <em>index.html</em>.<br />Navigate console to the folder you want to serve and run the command:<br /><code>ruby -run -e httpd . -p 9000</code></p><p>Open browser on address <em>http://localhost:9000</em></p>",
+        "content": "<p>You can use Webrick to serve static files like <em>index.html</em>.<br />Navigate console to the folder you want to serve and run the command:<br /><code>ruby -run -e httpd . -p 9000</code></p><p>Open browser on address <em>http://localhost:9000</em></p>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
         "commit": "3",
         "version": "any",
@@ -9,6 +10,7 @@
         "categories": ["console", "ruby", "server"]
     },
     {
+        "id": 2,
         "title": "Generate controller",
         "content": "<p><code>rails generate cotroller ControllerName action1 action2</code></p>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
@@ -18,6 +20,7 @@
         "categories": ["console", "controller"]
     },
     {
+        "id": 3,
         "title": "Generate model",
         "content": "<p><code>rails generate model User name:string</code></p>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
@@ -27,6 +30,7 @@
         "categories": ["console", "model"]
     },
     {
+        "id": 4,
         "title": "Revert changes (generated files)",
         "content": "<p>Ungenerate model and all generated files:<br /><code>rails destroy model User</code></p><p>Ungenerate controller and all generated files:<br /><code>rails destroy controller ControllerName</code></p>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
@@ -36,6 +40,7 @@
         "categories": ["console", "model", "controller"]
     },
     {
+        "id": 5,
         "title": "Write model changes to database",
         "content": "<p><code>rails db:migrate</code></p>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
@@ -45,6 +50,7 @@
         "categories": ["console", "model", "database", "migrations"]
     },
     {
+        "id": 6,
         "title": "Reverting last database migration",
         "content": "<p><code>rails db:rollback</code></p>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
@@ -54,6 +60,7 @@
         "categories": ["console", "model", "database", "rollback", "migrations"]
     },
     {
+        "id": 7,
         "title": "Migrating db to a specific version",
         "content": "<p><code>rails db:migrate VERSION=0</code></p>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
