@@ -8,7 +8,8 @@ It is meant as a public library with the [Ruby on Rails](http://rubyonrails.org)
 
 This page is running on [GitHub Pages](https://pages.github.com) so it is a pure html/css/js.  
 Its content is loaded from a **datasource.json** json file located in the root of the page. If you want to contribute, create a [pull request](https://help.github.com/articles/creating-a-pull-request). The only thing you need to do is to update the **datasource.json** file. It's structure is pretty straightforward.
-                            
+
+ - **id:** - just increase the last one.      
  - **title:** - title of the sheet.
  - **content:** - the content. Use html as you need. **Do** wrap the whole content to *&lt;p&gt;* (or make more of them). It is not wrapped automatically.
  - **imageUrl:** - absolute path to your Github profile image. Not needed.
