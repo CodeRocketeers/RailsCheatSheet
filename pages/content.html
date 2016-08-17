@@ -1,0 +1,58 @@
+<section class="content" ng-controller="sheetsController">
+    <pagination></pagination>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+                <!-- POST -->
+                <div class="post" ng-repeat="sheet in sheets | limitTo: pageSize : currentPage * pageSize">
+                    <div class="wrap-ut pull-left">
+                        <div class="userinfo pull-left">
+                            <div class="avatar">
+                                <img ng-src="{{ sheet.imageUrl | orDefaultAvatar }}" alt="" width="37" height="37" />
+                            </div>
+
+                            <div class="icons">
+                                <img src="images/icon4.jpg" ng-show="{{ sheet.version != 'any' }}" alt="Ruby on Rails version restriction!" title="Ruby on Rails version restriction!" />
+                            </div>
+                        </div>
+                        <div class="posttext pull-left">
+                            <h2>{{ sheet.title }}</h2>
+                            <div ng-bind-html="sheet.content | html"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="postinfo pull-left">
+                        <div class="comments">
+                            <div class="commentbg">
+                                {{ sheet.emoticon }}
+                            </div>
+
+                        </div>
+                        <div class="views" title="number of edits of this sheet"><i class="fa fa-pencil"></i> {{ sheet.commit }}</div>
+                        <div class="time" title="version of Ruby on Rails"><i class="fa fa-code-fork"></i> {{ sheet.version }}</div>                                    
+                    </div>
+                    <div class="clearfix"></div>
+                </div><!-- POST -->
+                
+            </div>
+            <div class="col-lg-4 col-md-4">
+
+                <!-- -->
+                <div class="sidebarblock">
+                    <h3>Categories</h3>
+                    <div class="divline"></div>
+                    <div class="blocktxt" ng-controller="categoriesController">
+                        <ul class="cats">
+                            <li ng-repeat="category in categories"><a href="#/" ng-click="setCategory(category.name)">{{ category.name }} <span class="badge pull-right">{{ category.count }}</span></a></li>
+                        </ul>
+                        <hr ng-show="category != null" />
+                        <ul class="cats" ng-show="category != null">
+                            <li><a href="#/" ng-click="setCategory(null)"><i class="fa fa-trash-o"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <pagination></pagination>
+</section>

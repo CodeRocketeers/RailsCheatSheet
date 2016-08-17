@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ruby on Rails :: Cheat Sheet</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom -->
+        <link href="css/custom.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+          <![endif]-->
+
+        <!-- fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
+
+        <!-- CSS STYLE-->
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+    </head>
+    <body ng-app="App">
+
+        <div class="container-fluid">
+
+            <div class="headernav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-1 col-xs-3 col-sm-2 col-md-2 logo "><a href="#/"><img src="images/logo.png" alt=""  /></a></div>
+                        <div class="col-lg-7 col-xs-9 col-sm-5 col-md-7">
+                            <a href="#/">Rails Cheat Sheet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ng-view></ng-view>
+
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-1 col-xs-3 col-sm-2 logo "><a href="#/"><img src="images/logo.png" alt="" /></a></div>
+                        <div class="col-lg-8 col-xs-9 col-sm-5 ">Created by <a href="http://coderocketeers.com" target="_blank">Code Rocketeers</a>&nbsp;&bull;&nbsp;<a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>&nbsp;&bull;&nbsp;<a href="#/contribute" class="red">Do you want to contribute?</a></div>
+                        <div class="col-lg-3 col-xs-12 col-sm-5 sociconcent">
+                            <ul class="socialicons">
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//railscheatsheet.com" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="https://twitter.com/home?status=http%3A//railscheatsheet.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://plus.google.com/share?url=http%3A//railscheatsheet.com" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//railscheatsheet.com&title=&summary=&source=" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <a href="https://github.com/CodeRocketeers/RailsCheatSheet" id="forkme" target="_blank"></a>
+
+        <!-- angular -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>

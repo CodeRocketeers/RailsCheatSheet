@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-xs-12 col-md-8">
+            <div class="pull-left"><a href="#/" class="prevnext" ng-click="setCurrentPage(currentPage - 1)"><i class="fa fa-angle-left"></i></a></div>
+            <div class="pull-left">
+                <ul class="paginationforum">
+                    <li ng-repeat="i in pages"><a href="#/" ng-class="{ 'active': currentPage == i }" ng-click="setCurrentPage(i)">{{i + 1}}</a></li>
+                </ul>
+            </div>
+            <div class="pull-left"><a href="#/" class="prevnext last" ng-click="setCurrentPage(currentPage + 1)"><i class="fa fa-angle-right"></i></a></div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
