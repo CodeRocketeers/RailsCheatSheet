@@ -72,7 +72,7 @@
     {
         "id": 8,
         "title": "Seting up a new project and running it",
-        "content": "<p><code>rails new My_New_App_Name<br />bundler install<br />rails db:create:all<br />rails server</code></p>",
+        "content": "<p><code>rails new My_New_App_Name<br />bundle install<br />rails db:create:all<br />rails server</code></p>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
         "commit": "1",
         "version": "any",
