@@ -78,5 +78,15 @@
         "version": "any",
         "emoticon": "*",
         "categories": ["console", "database", "new project", "bundler", "migrations"]
+    },
+    {
+        "id": 9,
+        "title": "Listing all routes in application",
+        "content": "<p><code>rails routes</code></p>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": "*",
+        "categories": ["console", "routes"]
     }
 ]
