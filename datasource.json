@@ -1,5 +1,15 @@
 [
     {
+        "id": 11,
+        "title": "Run rails console",
+        "content": "<p><code>rails console</code> or <code>rails c</code></p> <p> You can specify the environment in which the console command should operate. </p> <p><code>rails console test</code></p> <p> If you wish to test out some code without changing any data, you can do that by invoking </p> <p><code> rails c --sandbox</code> </p>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/10528914?v=3&s=460",
+        "commit": "3",
+        "version": "any",
+        "emoticon": ":)",
+        "categories": ["ruby", "console"]
+    },
+    {
         "id": 10,
         "title": "'else if' or 'elseif' not working?",
         "content": "<p>Well, in ruby it is <code><% elsif %></code> (note the missing 'e' in elsE)</p>",
