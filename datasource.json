@@ -1,4 +1,13 @@
-[
+[   {
+        "id": 12,
+        "title": "Add attribute to a model",
+        "content": "<p><code>rails generate migration AddAttributeToModel attribute:datatype</code></p> <p>This will generate a migration adding an attribute to a model",
+        "imageUrl": "https://avatars0.githubusercontent.com/u/8698539?v=3&s=460",
+        "commit": "1",
+        "version": "any",
+        "emoticon": "xD",
+        "categories": ["rails", "migrations", "model"]
+    },
     {
         "id": 11,
         "title": "Run rails console",
