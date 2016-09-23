@@ -1,4 +1,15 @@
-[   {
+[   
+    {
+        "id": 13,
+        "title": "",
+        "content": "<p>Checking if the property or related entity is nil:<br /><code>def has_object?<br />\tobject.nil?\nend</code> is checking the property value, but <br /><code>def has_object?\n\tobject.nil?\nend</code> will trigger sql query:<br /><code>SELECT  \"objects\".* FROM \"objects\" WHERE \"objects\".\"object_id\" = $1 LIMIT $2</code></p>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": "!!!",
+        "categories": ["database", "sql"]
+    },
+    {
         "id": 12,
         "title": "Add attribute to a model",
         "content": "<p><code>rails generate migration AddAttributeToModel attribute:datatype</code></p> <p>This will generate a migration adding an attribute to a model",
@@ -17,16 +28,6 @@
         "version": "any",
         "emoticon": ":)",
         "categories": ["ruby", "console"]
-    },
-    {
-        "id": 11,
-        "title": "",
-        "content": "<p>Checking if the property or related entity is nil is a big difference:<br /><code>def has_object?<br />\tobject.nil?\nend</code> is checking the property value, but <br /><code>def has_object?\n\tobject.nil?\nend</code> will trigger sql query:<br /><code>SELECT  \"objects\".* FROM \"objects\" WHERE \"objects\".\"object_id\" = $1 LIMIT $2</code></p>",
-        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
-        "commit": "1",
-        "version": "any",
-        "emoticon": "!!!",
-        "categories": ["database", "sql"]
     },
     {
         "id": 10,
