@@ -1,13 +1,13 @@
 [   
     {
         "id": 13,
-        "title": "",
-        "content": "<p>Checking if the property or related entity is nil:<br /><code>def has_object?<br />\tobject.nil?\nend</code> is checking the property value, but <br /><code>def has_object?\n\tobject.nil?\nend</code> will trigger sql query:<br /><code>SELECT  \"objects\".* FROM \"objects\" WHERE \"objects\".\"object_id\" = $1 LIMIT $2</code></p>",
+        "title": "Checking if the related entity is nil",
+        "content": "<p>This is checking a property value:<br /><pre>def has_object?\n&nbsp;&nbsp;object_id.nil?\nend</pre> but this will trigger a sql query:<br /><pre>def has_object?\n&nbsp;&nbsp;object.nil?\nend</pre>sql query:<br /><pre>SELECT  \"objects\".* FROM \"objects\"\nWHERE \"objects\".\"object_id\" = $1 LIMIT $2</pre></p>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
-        "commit": "1",
+        "commit": "2",
         "version": "any",
         "emoticon": "!!!",
-        "categories": ["database", "sql"]
+        "categories": ["database", "sql", "relations"]
     },
     {
         "id": 12,
