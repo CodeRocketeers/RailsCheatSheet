@@ -2,9 +2,9 @@
     {
         "id": 14,
         "title": "Adding and removing column in migration",
-        "content": "Adding: <code>add_column :table_name, :column_name, :integer, default: 0</code><br />Removing: <code>remove_column :table_name, :column_name</code>",
+        "content": "Adding: <code>add_column :table_name, :column_name, :integer, default: 0</code><br />Removing: <code>remove_column :table_name, :column_name</code><br />*table names are in plural",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
-        "commit": "1",
+        "commit": "2",
         "version": "any",
         "emoticon": ":)",
         "categories": ["database", "migrations"]
