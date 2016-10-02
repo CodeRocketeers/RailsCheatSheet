@@ -1,5 +1,15 @@
 [
     {
+        "id": 15,
+        "title": "Using custom mailer views with Devise and custom controllers",
+        "content": "When using <a href=\"https://github.com/plataformatec/devise\" target=\"_blank\">Devise</a> with custom controllers and views, mailer is usign default templates unless the <code>config.scoped_views = true</code> is set in <code>/config/initializers/devise.rb</code>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": "!",
+        "categories": ["devise", "mailer"]
+    },
+    {
         "id": 14,
         "title": "Adding and removing column in migration",
         "content": "Adding: <code>add_column :table_name, :column_name, :integer, default: 0</code><br />Removing: <code>remove_column :table_name, :column_name</code><br />*table names are in plural",
