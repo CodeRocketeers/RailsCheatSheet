@@ -43,7 +43,7 @@
                     <div class="divline"></div>
                     <div class="blocktxt" ng-controller="categoriesController">
                         <ul class="cats">
-                            <li ng-repeat="category in categories"><a href="#/" ng-click="setCategory(category.name)">{{ category.name }} <span class="badge pull-right">{{ category.count }}</span></a></li>
+                            <li ng-repeat="category in categories | orderBy:'name'"><a href="#/" ng-click="setCategory(category.name)">{{ category.name }} <span class="badge pull-right">{{ category.count }}</span></a></li>
                         </ul>
                         <hr ng-show="category != null" />
                         <ul class="cats" ng-show="category != null">
