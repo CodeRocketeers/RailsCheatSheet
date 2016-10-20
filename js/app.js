@@ -1,7 +1,10 @@
+// no expected to be extended anytime, thus all in one file..
+
 'use strict';
 
 var app = angular.module('App', ['ngRoute']);
 
+// router
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
         .when('/', { controller: 'sheetsController', templateUrl: 'pages/content.html' } )
@@ -9,8 +12,9 @@ app.config(['$routeProvider', function($routeProvider){
         .otherwise( { redirectTo: '/' } );
 }]);
 
+// services
 app.service('dataLoaderService', ['$http', function($http) {
-    
+
     this.Load = function() {
         var result = { data: null };
 
@@ -32,11 +36,12 @@ app.service('resultService', function() {
 
 });
 
+// controllers
 app.controller('sheetsController', ['$scope', 'dataLoaderService', 'resultService', function($scope, dataLoaderService, resultService) {
-    
+
     $scope.category = null;
 
-    function load() { 
+    function load() {
         $scope.sheets = null;
         $scope.currentPage = 0;
         $scope.pageSize = 5;
@@ -117,11 +122,12 @@ app.controller('categoriesController', ['$scope', 'resultService', function($sco
                 }
             });
         });
-    
+
         return categories;
     };
 }]);
 
+// directives
 app.directive('pagination', function() {
     return {
         restrict: 'E',
@@ -130,6 +136,7 @@ app.directive('pagination', function() {
     }
 });
 
+// filters
 app.filter('html', ['$sce', function($sce) {
     return function(val) {
         return $sce.trustAsHtml(val);
