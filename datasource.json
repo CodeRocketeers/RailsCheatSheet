@@ -2,7 +2,7 @@
     {
         "id": 18,
         "title": "Select 10 random records",
-        "content": "<code>Order.order("RANDOM()").limit(10)</code>",
+        "content": "<code>Order.order(\"RANDOM()\").limit(10)</code>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
         "commit": "1",
         "version": "any",
