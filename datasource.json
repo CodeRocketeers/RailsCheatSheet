@@ -1,5 +1,25 @@
 [
     {
+        "id": 18,
+        "title": "Select 10 random records",
+        "content": "<code>Order.order("RANDOM()").limit(10)</code>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": "R",
+        "categories": ["database", "model", "query"]
+    },
+    {
+        "id": 17,
+        "title": "Log SQL output to console automatically",
+        "content": "In <em>config/environment/development.rb</em> set<br /><code>config.log_level = :debug</code><br />Don't forget to restart the console.",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": "SQL",
+        "categories": ["console", "database", "sql"]
+    },
+    {
         "id": 16,
         "title": "Run migrations on Heroku",
         "content": "<code>heroku run --app [APP_NAME] rake db:migrate</code>",
@@ -28,7 +48,7 @@
         "version": "any",
         "emoticon": ":)",
         "categories": ["database", "migrations"]
-    },   
+    },
     {
         "id": 13,
         "title": "Checking if the related entity is nil",
