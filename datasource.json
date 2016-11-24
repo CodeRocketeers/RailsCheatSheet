@@ -122,9 +122,9 @@
     {
         "id": 6,
         "title": "Reverting last database migration",
-        "content": "<p><code>rails db:rollback</code></p>",
+        "content": "<p><code>rails db:rollback STEP=N</code> where 'N' is number of migrations to rollback</p>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
-        "commit": "1",
+        "commit": "2",
         "version": "any",
         "emoticon": ":)",
         "categories": ["console", "model", "database", "rollback", "migrations"]
