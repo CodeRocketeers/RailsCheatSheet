@@ -2,9 +2,9 @@
     {
         "id": 19,
         "title": "Dumping actual db schema into a schame.rb and restoring it",
-        "content": "When a new environment is setting up, it's not needed run all migrations one by one. You can create a dump of actual database schema by running<br /><code>rails db:schema:dump</code> and later restoring it by <br /><code>rails db:schema:load</code>",
+        "content": "When a new environment is setting up, it's not needed run all migrations one by one. You can create a dump of actual database schema by running<code>rails db:schema:dump</code> and later restoring it by <code>rails db:schema:load</code>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
-        "commit": "1",
+        "commit": "2",
         "version": "any",
         "emoticon": "SQL",
         "categories": ["database", "migrations"]
