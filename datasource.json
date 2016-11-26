@@ -1,5 +1,15 @@
 [
     {
+        "id": 20,
+        "title": "Get rid of 'field_with_errors' wrappers",
+        "content": "When submitting a form and the validation doesn't pass, invalid fields are wrapped by <code>&lt;div class=\"field_with_errors\"&gt;</code>.<br />You can get rid of it by the following piece of code in <em>config/environment.rb</em> file:<pre>ActionView::Base.field_error_proc = Proc.new do |html_tag, inst|\n&nbsp;&nbsp;html_tag.html_safe\nend</pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": "?",
+        "categories": ["views", "field_with_errors", "validation"]
+    },
+    {
         "id": 19,
         "title": "Dumping actual db schema into a schame.rb and restoring it",
         "content": "When a new environment is setting up, it's not needed run all migrations one by one. You can create a dump of actual database schema by running <code>rails db:schema:dump</code> and later restoring it by <code>rails db:schema:load</code>",
