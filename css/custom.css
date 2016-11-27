@@ -1252,3 +1252,8 @@ pre {
 h2 a:hover {
     text-decoration: none;
 }
+
+.headernav a:focus {
+  color: #363838;
+  text-decoration: inherit;
+}
