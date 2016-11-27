@@ -75,6 +75,13 @@ app.controller('sheetsController', ['$scope', 'dataLoaderService', 'resultServic
         load();
     };
 
+    $scope.filterSelectedCategory = function(category) {
+        if ($scope.category != null) {
+            return category.name == $scope.category;
+        }
+        return true;
+    };
+
     function filterByCategory(sheets) {
         if ($scope.category == null) {
             return sheets;

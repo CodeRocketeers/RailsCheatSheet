@@ -29,11 +29,11 @@
 
                         </div>
                         <div class="views" title="number of edits of this sheet"><i class="fa fa-pencil"></i> {{ sheet.commit }}</div>
-                        <div class="time" title="version of Ruby on Rails"><i class="fa fa-code-fork"></i> {{ sheet.version }}</div>                                    
+                        <div class="time" title="version of Ruby on Rails"><i class="fa fa-code-fork"></i> {{ sheet.version }}</div>
                     </div>
                     <div class="clearfix"></div>
                 </div><!-- POST -->
-                
+
             </div>
             <div class="col-lg-4 col-md-4">
 
@@ -43,7 +43,7 @@
                     <div class="divline"></div>
                     <div class="blocktxt" ng-controller="categoriesController">
                         <ul class="cats">
-                            <li ng-repeat="category in categories | orderBy:'name'"><a href="#/" ng-click="setCategory(category.name)">{{ category.name }} <span class="badge pull-right">{{ category.count }}</span></a></li>
+                            <li ng-repeat="category in categories | filter: filterSelectedCategory | orderBy:'name'"><a href="#/" ng-click="setCategory(category.name)">{{ category.name }} <span class="badge pull-right">{{ category.count }}</span></a></li>
                         </ul>
                         <hr ng-show="category != null" />
                         <ul class="cats" ng-show="category != null">
