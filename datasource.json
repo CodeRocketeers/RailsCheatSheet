@@ -1,5 +1,15 @@
 [
     {
+        "id": 21,
+        "title": "Looping through array by pairs",
+        "content": "You can loop through an array by pairs and then do a nested loop inside the pair. For example create a table with two columns:<pre>&lt;table&gt;\n&nbsp;&nbsp;<% @names.each_slice(2) do |slice| -%>\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<% slice.each do |name| -%>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;<%= name %>&lt;/td&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<% end -%>\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;\n&nbsp;&nbsp;<% end -%>\n&lt;/table&gt;</pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": ":O",
+        "categories": ["views", "each_slice", "each"]
+    },
+    {
         "id": 20,
         "title": "Get rid of 'field_with_errors' wrappers",
         "content": "When submitting a form and the validation doesn't pass, invalid fields are wrapped by <code>&lt;div class=\"field_with_errors\"&gt;</code>.<br />You can get rid of it by the following piece of code in <em>config/environment.rb</em> file:<pre>ActionView::Base.field_error_proc = Proc.new do |html_tag, inst|\n&nbsp;&nbsp;html_tag.html_safe\nend</pre>",
