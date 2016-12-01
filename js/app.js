@@ -9,6 +9,7 @@ app.config(['$routeProvider', function($routeProvider){
     $routeProvider
         .when('/', { controller: 'sheetsController', templateUrl: 'pages/content.html' } )
         .when('/contribute', { templateUrl: 'pages/contribute.html' } )
+        .when('/cheatsheet/:id/:title', { controller: 'detailController', templateUrl: 'pages/content.html' })
         .otherwise( { redirectTo: '/' } );
 }]);
 
@@ -40,6 +41,8 @@ app.service('resultService', function() {
 app.controller('sheetsController', ['$scope', 'dataLoaderService', 'resultService', function($scope, dataLoaderService, resultService) {
 
     $scope.category = null;
+    $scope.isDetail = false;
+    $scope.detailPath = "cheatsheet";
 
     function load() {
         $scope.sheets = null;
@@ -75,6 +78,17 @@ app.controller('sheetsController', ['$scope', 'dataLoaderService', 'resultServic
         load();
     };
 
+    $scope.filterSelectedCategory = function(category) {
+        if ($scope.category != null) {
+            return category.name == $scope.category;
+        }
+        return true;
+    };
+
+    $scope.urlNormalize = function(title) {
+        return title.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
+    };
+
     function filterByCategory(sheets) {
         if ($scope.category == null) {
             return sheets;
@@ -86,8 +100,63 @@ app.controller('sheetsController', ['$scope', 'dataLoaderService', 'resultServic
                 if (category == $scope.category) {
                     newSheets.push(sheet);
                 }
-            })
+            });
         })
+
+        return newSheets;
+    }
+
+    load();
+}]);
+
+app.controller('detailController', ['$scope', '$routeParams', 'dataLoaderService', 'resultService', function($scope, $routeParams, dataLoaderService, resultService) {
+
+    $scope.categories = null;
+    $scope.isDetail = true;
+
+    $scope.filterSelectedCategory = function(category) {
+        var result = false;
+        if ($scope.categories != null) {
+            var keepGoing = true;
+            angular.forEach($scope.categories, function(cat) {
+                if (keepGoing) {
+                    if (cat == category.name) {
+                        result = true;
+                        keepGoing = false;
+                    }
+                }
+            });
+        }
+        return result;
+    };
+
+    function load() {
+        $scope.sheets = null;
+        $scope.currentPage = 0;
+        $scope.pageSize = 5;
+        $scope.pages = [0];
+        var promise = dataLoaderService.Load();
+        resultService.setPromise(promise);
+
+        promise.then(function(response) {
+            $scope.sheets = filterById(response.data, $routeParams.id);
+            if ($scope.sheets.length > 0) {
+                $scope.categories = $scope.sheets[0].categories;
+            }
+        });
+    };
+
+    function filterById(sheets, id) {
+        var newSheets = [];
+        var keepGoing = true;
+        angular.forEach(sheets, function(sheet) {
+            if(keepGoing) {
+              if (sheet.id == id) {
+                  newSheets.push(sheet);
+                  keepGoing = false;
+              }
+            }
+        });
 
         return newSheets;
     }

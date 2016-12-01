@@ -42,10 +42,10 @@ body {
 }
 
 a {
-    color: #363838;    
+    color: #363838;
 }
 a:hover {
-    color: #989c9e;    
+    color: #989c9e;
 }
 
 h1 {
@@ -69,7 +69,7 @@ footer .logo {
 
 ul.socialicons li {
     display: inline-block;
-    list-style: none;  
+    list-style: none;
     font-size: 18px;
     color:#bdc3c7;
     margin-left: 15px;
@@ -177,9 +177,9 @@ ul.socialicons li a:hover {
     background-color: #1abc9c;
 }
 
-.avt .btn-primary:hover, 
-.avt .btn-primary:focus, 
-.avt .btn-primary:active, 
+.avt .btn-primary:hover,
+.avt .btn-primary:focus,
+.avt .btn-primary:active,
 .avt .btn-primary.active{
     background-color: #1abc9c;
 
@@ -458,7 +458,7 @@ td.chbox {
 
     color: #989c9e;
     font-size: 14px;
-    font-family: 'Open Sans Light', sans-serif;   
+    font-family: 'Open Sans Light', sans-serif;
     line-height: 25px;
 }
 
@@ -484,7 +484,7 @@ td.chbox {
 .post h2 {
     color: #363838;
     font-size: 18px;
-    font-family: 'Open Sans', sans-serif;   
+    font-family: 'Open Sans', sans-serif;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -503,7 +503,7 @@ td.chbox {
     padding: 12px 17px;
     color: #ffffff;
     font-size: 14px;
-    font-family: 'Open Sans Bold', sans-serif; 
+    font-family: 'Open Sans Bold', sans-serif;
     position: relative;
 }
 
@@ -524,7 +524,7 @@ td.chbox {
     border-bottom: solid 1px #f1f1f1;
     color:#9da6aa;
     font-size: 12px;
-    font-family: 'Open Sans Regular', sans-serif; 
+    font-family: 'Open Sans Regular', sans-serif;
     text-align: center;
     line-height: 29px;
 }
@@ -536,7 +536,7 @@ td.chbox {
 .post .time {
     color:#9da6aa;
     font-size: 12px;
-    font-family: 'Open Sans Regular', sans-serif; 
+    font-family: 'Open Sans Regular', sans-serif;
     text-align: center;
     line-height: 29px;
 
@@ -559,7 +559,7 @@ td.chbox {
 .breadcrumbf a , .breadcrumbf {
     color: #bdc3c7;
     font-size: 12px;
-    font-family: 'Open Sans Regular', sans-serif; 
+    font-family: 'Open Sans Regular', sans-serif;
     line-height: 62px;
 }
 
@@ -601,7 +601,7 @@ td.chbox {
     margin-left: 18px;
     font-size: 12px;
     color: #bdc3c7;
-    font-family: 'Open Sans Regular', sans-serif; 
+    font-family: 'Open Sans Regular', sans-serif;
 }
 
 .postinfobot .posted i {
@@ -669,7 +669,7 @@ a.down:hover {
     font-size: 12px;
     color: #bdc3c7;
     display: block;
-    font-family: 'Open Sans Regular', sans-serif; 
+    font-family: 'Open Sans Regular', sans-serif;
 }
 
 .textwraper textarea {
@@ -706,7 +706,7 @@ a.down:hover {
 .postinfobot label {
     color: #bdc3c7;
     font-size: 12px;
-    font-family: 'Open Sans Regular', sans-serif; 
+    font-family: 'Open Sans Regular', sans-serif;
 
 }
 
@@ -726,7 +726,7 @@ a.down:hover {
     padding: 10px 15px;
     color: #ffffff;
     font-size: 14px;
-    font-family: 'Open Sans Bold', sans-serif; 
+    font-family: 'Open Sans Bold', sans-serif;
     border: none;
 
 }
@@ -754,7 +754,7 @@ a.down:hover {
     padding: 20px;
     font-size: 14px;
     color: #989c9e;
-    font-family: 'Open Sans Light', sans-serif; 
+    font-family: 'Open Sans Light', sans-serif;
     margin-bottom: 20px;
     height: 50px;
 }
@@ -767,7 +767,7 @@ a.down:hover {
 
     font-size: 14px;
     color: #989c9e;
-    font-family: 'Open Sans Light', sans-serif; 
+    font-family: 'Open Sans Light', sans-serif;
     margin-bottom: 20px;
     height: 50px;
 }
@@ -787,7 +787,7 @@ a.down:hover {
     padding: 20px;
     font-size: 14px;
     color: #989c9e;
-    font-family: 'Open Sans Light', sans-serif; 
+    font-family: 'Open Sans Light', sans-serif;
     margin-bottom: 20px;
     height: 150px;
 }
@@ -801,7 +801,7 @@ a.down:hover {
 .newtopic p {
     font-size: 14px;
     color: #363838;
-    font-family: 'Open Sans Light', sans-serif; 
+    font-family: 'Open Sans Light', sans-serif;
 }
 
 
@@ -871,7 +871,7 @@ a.down:hover {
 .postinfotop h2 {
     color: #363838;
     font-size: 14px;
-    font-family: 'Open Sans Bold', sans-serif; 
+    font-family: 'Open Sans Bold', sans-serif;
     padding: 20px;
     margin: 0;
     border-bottom: solid 1px #f1f1f1;
@@ -932,7 +932,7 @@ a.down:hover {
 
 .accsection .htext {
     width: 40%;
-    float: left; 
+    float: left;
 }
 
 .accsection .hnotice {
@@ -991,7 +991,7 @@ a.down:hover {
 /*--- Extra small devices (less 767px) ---*/
 
 @media (max-width: 767px) {
-    
+
     /*--- index.html ---*/
     .container-fluid {
         padding: 0;
@@ -1039,7 +1039,7 @@ a.down:hover {
     }
 
     .avt {
-        height: auto; 
+        height: auto;
         margin-bottom: 15px;
     }
 
@@ -1103,7 +1103,7 @@ a.down:hover {
         margin-bottom: 20px;
     }
 
-    .accsection .htext, 
+    .accsection .htext,
     .accsection .hnotice {
         width: 100%;
     }
@@ -1170,7 +1170,7 @@ a.down:hover {
     }
 
     .avt {
-        height: auto; 
+        height: auto;
         margin-bottom: 15px;
     }
 
@@ -1194,7 +1194,7 @@ a.down:hover {
     .dropdown.avatar b.caret {
         color: #363838;
     }
-    
+
 }
 
 
@@ -1245,4 +1245,15 @@ pre {
     background-color: #f9f2f4;
     border-radius: 4px;
     border: 0;
+}
+
+/*-----------------------------------------------------------------*/
+/*--- Large devices (more 1200px) ---*/
+h2 a:hover {
+    text-decoration: none;
+}
+
+.headernav a:focus {
+  color: #363838;
+  text-decoration: inherit;
 }
