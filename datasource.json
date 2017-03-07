@@ -1,5 +1,15 @@
 [
     {
+        "id": 23,
+        "title": "Passing error flash message to 'redirect_to' method",
+        "content": "Only <code>:notice</code> and <code>:alert</code> are by default accepted as flash keys passed to <code>redirect_to</code> method. To show <code>:error</code>:<pre>redirect_to my_path, :flash => { :error => 'My error message' }</pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": ":)",
+        "categories": ["flash", "redirect_to"]
+    },
+    {
         "id": 22,
         "title": "Private associations",
         "content": "It is possible to set the assocations private:<pre>class Order < ActiveRecord::Base\n&nbsp;&nbsp;has_many :order_items, :dependent => :destroy\n&nbsp;&nbsp;private :order_items, :order_items=\nend</pre>",
