@@ -2,7 +2,7 @@
     {
         "id": 25,
         "title": "Scoped associations",
-        "content": "<pre>class Author<br />&nbsp;&nbsp;has_many :books<br />&nbsp;&nbsp;has_many :published_books, -> { published }, class_name: 'Book'<br />end</pre><br />You can even use such scope in <code>.includes</code> method<pre>authors = Author.includes(:published_books).where(books: { user_id: current_user.id })</pre>",
+        "content": "<pre>class User<br />&nbsp;&nbsp;has_many :orders<br />&nbsp;&nbsp;has_many :active_orders, -> { active }, class_name: 'Order'<br />end</pre><br />You can even use such scope in <code>.includes</code> method<pre>users = User.includes(:active_orders).where(orders: { user_id: current_user.id })</pre>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
         "commit": "2",
         "version": "any",
