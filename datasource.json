@@ -1,5 +1,15 @@
 [
     {
+        "id": 25,
+        "title": "Scoped associations",
+        "content": "<pre>class Author<br />&nbsp;&nbsp;has_many :books<br />&nbsp;&nbsp;has_many :published_books, -> { published }, class_name: 'Book'<br />end</pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": ":)",
+        "categories": ["assocations", "conditions"]
+    },
+    {
         "id": 24,
         "title": "POST links are not working",
         "content": "If the <code><%= link_to 'Some Link', some_path, method: :post %></code> is not working, check you have <code>jquery</code> and <code>jquery_ujs</code> loaded in <em>application.js</em>:<pre>//= require jquery<br />//= require jquery_ujs</pre>",
