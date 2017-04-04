@@ -7,7 +7,7 @@
         "commit": "1",
         "version": "any",
         "emoticon": ":)",
-        "categories": ["assocations", "conditions"]
+        "categories": ["associations", "scopes"]
     },
     {
         "id": 24,
