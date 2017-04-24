@@ -1,5 +1,15 @@
 [
     {
+        "id": 26,
+        "title": "Nested attributes duplicate models when editing",
+        "content": "When using <code>accepts_nested_attributes_for</code> you must insert nested model's <code>:id</code> in strong parameters to avoid creating duplicates:<pre>def params_update<br />&nbsp;&nbsp;params.require(:parent_model).permit(:first_attribute, :second_attribute, child_attributes: [:id, :another_child_attribute])<br />end</pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": ":)",
+        "categories": ["associations", "accepts_nested_attributes_for", "duplication", "strong parameters"]
+    },
+    {
         "id": 25,
         "title": "Scoped associations",
         "content": "<pre>class User<br />&nbsp;&nbsp;has_many :orders<br />&nbsp;&nbsp;has_many :active_orders, -> { active }, class_name: 'Order'<br />end</pre><br />You can even use such scope in <code>.includes</code> method<pre>users = User.includes(:active_orders).where(orders: { user_id: current_user.id })</pre>",
