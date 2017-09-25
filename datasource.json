@@ -1,5 +1,25 @@
 [
     {
+        "id": 27,
+        "title": "Inline if ... elsif in view",
+        "content": "<pre><%= (\"a\" if key == \"a\") || (\"b\" if key == \"b\") || \"c\" %></pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": ":)",
+        "categories": ["views", "conditions", "erb"]
+    },
+    {
+        "id": 26,
+        "title": "Nested attributes duplicate models when editing",
+        "content": "When using <code>accepts_nested_attributes_for</code> you must insert nested model's <code>:id</code> in strong parameters to avoid creating duplicates:<pre>def params_update<br />&nbsp;&nbsp;params.require(:parent_model).permit(:first_attribute, :second_attribute, child_attributes: [:id, :another_child_attribute])<br />end</pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": ":)",
+        "categories": ["associations", "accepts_nested_attributes_for", "duplication", "strong parameters"]
+    },
+    {
         "id": 25,
         "title": "ActiveSupport#delegate",
         "content": "If you have multiple nested objects, it can be tricky to check all of them not being nil.<pre>#can get NoMethodsError when the client is nil<br />order.client.address</pre>You can use <code>ActiveSupport#delegate</code> like this to avoid the problem, which will create a <code>order.client_address</code> for you:<pre>class Order<br />&nbsp;&nbsp;delegate :address, to: :client, prefix: true, allow_nil: true<br />end</pre>Moreover it is more readable and not violating the <a href='https://en.wikipedia.org/wiki/Law_of_Demeter' target='_blank'>Law of Demeter</a>.",
