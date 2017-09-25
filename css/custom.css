@@ -1257,3 +1257,15 @@ h2 a:hover {
   color: #363838;
   text-decoration: inherit;
 }
+
+.source {
+  border-top: 1px solid #f1f1f1;
+  font-family: 'Open Sans Regular', sans-serif;
+  font-size: 12px;
+  line-height: 29px;
+  text-align: center;
+}
+
+.source a {
+  color: #9da6aa;
+}

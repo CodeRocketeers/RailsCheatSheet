@@ -1,6 +1,17 @@
 [
     {
         "id": 25,
+        "title": "ActiveSupport#delegate",
+        "content": "If you have multiple nested objects, it can be tricky to check all of them not being nil.<pre>#can get NoMethodsError when the client is nil<br />order.client.address</pre>You can use <code>ActiveSupport#delegate</code> like this to avoid the problem, which will create a <code>order.client_address</code> for you:<pre>class Order<br />&nbsp;&nbsp;delegate :address, to: :client, prefix: true, allow_nil: true<br />end</pre>Moreover it is more readable and not violating the <a href='https://en.wikipedia.org/wiki/Law_of_Demeter' target='_blank'>Law of Demeter</a>.",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": "top!",
+        "categories": ["ActiveSupport", "delegate"],
+        "source": "https://karolgalanciak.com/blog/2017/09/24/do-or-do-not-there-is-no-try-object-number-try-considered-harmful/"
+    },
+    {
+        "id": 25,
         "title": "Scoped associations",
         "content": "<pre>class User<br />&nbsp;&nbsp;has_many :orders<br />&nbsp;&nbsp;has_many :active_orders, -> { active }, class_name: 'Order'<br />end</pre><br />You can even use such scope in <code>.includes</code> method<pre>users = User.includes(:active_orders).where(orders: { user_id: current_user.id })</pre>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",

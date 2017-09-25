@@ -31,6 +31,7 @@
                         </div>
                         <div class="views" title="number of edits of this sheet"><i class="fa fa-pencil"></i> {{ sheet.commit }}</div>
                         <div class="time" title="version of Ruby on Rails"><i class="fa fa-code-fork"></i> {{ sheet.version }}</div>
+                        <div class="source" title="{{ sheet.source }}" ng-show="{{ sheet.source != undefined }}"><i class="fa fa-globe"></i> <a href="{{ sheet.source }}" target="_blank">source</a></div>
                     </div>
                     <div class="clearfix"></div>
                 </div><!-- POST -->
