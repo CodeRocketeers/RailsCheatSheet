@@ -1,5 +1,15 @@
 [
 		{
+				"id": 31,
+				"title": "Querying for all users with a specific role",
+				"content": "<code>User</code> can have multiple roles and each <code>role</code> can be assigned to multiple users. Thus it is a <code>has_and_belongs_to_many</code> relation.<br />To query all users with a specific role:<pre>User.joins(:roles).where(roles: {id: role_id})</pre>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["associations", "ActiveRecord", "query", "relations"]
+		},
+		{
 				"id": 30,
 				"title": "Setting M:N relations by checkboxes",
 				"content": "If you have a <code>M:N</code> relation like between <code>User</code> and <code>Role</code> (user can have multiple roles and each role can be assigned to multiple users), than you may want to set a relation between those two by checkboxes:<pre><%= f.collection_check_boxes(:role_ids, Role.all, :id, :name) do |r| %><br />&nbsp;&nbsp;<%= r.check_box class: 'form-item' %>&nbsp;<%= r.text %><br /><% end %></pre>Migration:<pre>class CreateRolesUsers < ActiveRecord::Migration[5.1]<br />&nbsp;&nbsp;def change<br />&nbsp;&nbsp;&nbsp;&nbsp;create_table :roles_users do |t|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t.references :user, foreign_key: true<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t.references :role, foreign_key: true<br />&nbsp;&nbsp;&nbsp;&nbsp;end<br />&nbsp;&nbsp;end<br />end</pre>Setting strong parameters in controller:<pre>params.require(:user).permit(:name, {role_ids: []})</pre>",
