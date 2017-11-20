@@ -1,5 +1,15 @@
 [
 		{
+				"id": 32,
+				"title": "Adding field sizes to migrations",
+				"content": "For adding field sizes in database you can specify it in migrations like this:<pre>class Init < ActiveRecord::Migration[5.1]<br />&nbsp;&nbsp;def change<br />&nbsp;&nbsp;&nbsp;&nbsp;create_table :tests do |t|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t.string :name, limit: 100<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t.decimal :price, precision: 18, scale: 5<br />&nbsp;&nbsp;&nbsp;&nbsp;end<br />&nbsp;&nbsp;end<br />end",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["migrations", "ActiveRecord"]
+		},
+		{
 				"id": 31,
 				"title": "Querying for all users with a specific role",
 				"content": "<code>User</code> can have multiple roles and each <code>role</code> can be assigned to multiple users. Thus it is a <code>has_and_belongs_to_many</code> relation.<br />To query all users with a specific role:<pre>User.joins(:roles).where(roles: {id: role_id})</pre>",
