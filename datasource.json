@@ -1,5 +1,16 @@
 [
 		{
+				"id": 33,
+				"title": "Adding reference with the different column name",
+				"content": "Sometimes you may want to add a reference to an another model, but wit different attribute and db field name. Like you want to add a reference to a <code>User</code> model, but with attribute name (and db field name) <code>author</code>:<br /><pre># The migration<br />add_reference :posts, :author, references: :users, index: true<br />add_foreign_key :posts, :users, column: :author_id<br /><br /># The model<br />belongs_to :author, class_name: 'User'</pre>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["migrations", "ActiveRecord", "relations"],
+				"source": "https://stackoverflow.com/a/29577869/58049"
+		},
+		{
 				"id": 32,
 				"title": "Adding field sizes in migrations",
 				"content": "For adding field sizes in database you can specify it in migrations like this:<pre>class Init < ActiveRecord::Migration[5.1]<br />&nbsp;&nbsp;def change<br />&nbsp;&nbsp;&nbsp;&nbsp;create_table :tests do |t|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t.string :name, limit: 100<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t.decimal :price, precision: 18, scale: 5<br />&nbsp;&nbsp;&nbsp;&nbsp;end<br />&nbsp;&nbsp;end<br />end",
