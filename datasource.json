@@ -2,13 +2,13 @@
 		{
 				"id": 33,
 				"title": "Adding reference with the different column name",
-				"content": "Sometimes you may want to add a reference to an another model, but wit different attribute and db field name. Like you want to add a reference to a <code>User</code> model, but with attribute name (and db field name) <code>author</code>:<br /><pre># The migration<br />add_reference :posts, :author, references: :users, index: true<br />add_foreign_key :posts, :users, column: :author_id<br /><br /># The model<br />belongs_to :author, class_name: 'User'</pre>",
+				"content": "Sometimes you may want to add a reference to an another model, but wit different attribute and db field name. Like you want to add a reference to a <code>User</code> model, but with attribute name (and db field name) <code>author</code>:<br /><pre># The migration when creating new table:<br />t.references :author, index: true, foreign_key: { to_table: :users }<br /><br /># The migration when updating existing table:<br />add_reference :posts, :author, foreign_key: { to_table: :users }<br /><br /># The model<br />belongs_to :author, class_name: 'User'</pre>",
 				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
-				"commit": "1",
-				"version": "any",
+				"commit": "2",
+				"version": "5+",
 				"emoticon": "?",
 				"categories": ["migrations", "ActiveRecord", "relations"],
-				"source": "https://stackoverflow.com/a/29577869/58049"
+				"source": "https://stackoverflow.com/a/42056089/58049"
 		},
 		{
 				"id": 32,
