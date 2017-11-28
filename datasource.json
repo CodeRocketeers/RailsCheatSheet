@@ -1,5 +1,15 @@
 [
 		{
+				"id": 34,
+				"title": "Validation messages without a field name",
+				"content": "If you want validation messages without leading field name change it in localization folder:<br /><pre>en:<br />&nbsp;&nbsp;errors:<br />&nbsp;&nbsp;&nbsp;&nbsp;format: \"%{message}\"</pre>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["validation"]
+		},
+		{
 				"id": 33,
 				"title": "Adding reference with the different column name",
 				"content": "Sometimes you may want to add a reference to an another model, but wit different attribute and db field name. Like you want to add a reference to a <code>User</code> model, but with attribute name (and db field name) <code>author</code>:<br /><pre># The migration when creating new table:<br />t.references :author, index: true, foreign_key: { to_table: :users }<br /><br /># The migration when updating existing table:<br />add_reference :posts, :author, foreign_key: { to_table: :users }<br /><br /># The model<br />belongs_to :author, class_name: 'User'</pre>",
