@@ -1,5 +1,16 @@
 [
 		{
+				"id": 35,
+				"title": "Getting parameters from request.referer",
+				"content": "For getting parameters from <code>request.referer</code>: <pre>url = URI(request.referer)<br />params = CGI(url.query)<br />id = params[\"id\"]</pre>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["routes"],
+				"source": "https://stackoverflow.com/a/27246695/58049"
+		},
+		{
 				"id": 34,
 				"title": "Validation messages without a field name",
 				"content": "If you want validation messages without leading field name change it in localization folder:<br /><pre>en:<br />&nbsp;&nbsp;errors:<br />&nbsp;&nbsp;&nbsp;&nbsp;format: \"%{message}\"</pre>",
