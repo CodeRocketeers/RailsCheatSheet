@@ -1,5 +1,15 @@
 [
 		{
+				"id": 36,
+				"title": "Working with enums in Rails",
+				"content": "Specifying enum in model:<pre>enum: status [ :draft, :in_progress, :done ]</pre>Specifying enum in model with default values:<pre>#Note the change of square brackets to braces<br />enum: status { draft: 0, in_progress: 1, done: 2 }</pre>Specifying of default value in migration:<pre>add_column :tables, :status, :integer, default: 0</pre>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["enums", "model", "ActiveRecord"]
+		},
+		{
 				"id": 35,
 				"title": "Getting parameters from request.referer",
 				"content": "For getting parameters from <code>request.referer</code>: <pre>url = URI(request.referer)<br />params = CGI.parse(url.query)<br />id = params[\"id\"]</pre>",
