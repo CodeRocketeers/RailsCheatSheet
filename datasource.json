@@ -23,9 +23,9 @@
 		{
 				"id": 34,
 				"title": "Validation messages without a field name",
-				"content": "If you want validation messages without leading field name change it in localization folder:<br /><pre>en:<br />&nbsp;&nbsp;errors:<br />&nbsp;&nbsp;&nbsp;&nbsp;format: \"%{message}\"</pre>Default format is: <code>%{attribute} %{message}</code>",
+				"content": "If you want validation messages without leading field name change it in localization folder:<br /><pre>en:<br />&nbsp;&nbsp;errors:<br />&nbsp;&nbsp;&nbsp;&nbsp;format: \"%{message}\"</pre>Default is <code>format: %{attribute} %{message}</code>",
 				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
-				"commit": "2",
+				"commit": "3",
 				"version": "any",
 				"emoticon": "?",
 				"categories": ["validation"],
