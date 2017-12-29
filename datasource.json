@@ -1,5 +1,16 @@
 [
 		{
+				"id": 37,
+				"title": "Adding custom flash message types",
+				"content": "Flash messages accept any symbol, but for <code>redirect_to</code> method only <code>:notice</code> and <code>:alert</code> symbols are accepted by default.<br />If you want to add another symbols, you can do so by:<pre>class ApplicationController < ActionController::Base<br />&nbsp;&nbsp;add_flash_types :error, ...</pre> and than you can use it like:<pre>redirect_to root_path, error: 'Some error'</pre>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "4+",
+				"emoticon": "?",
+				"categories": ["flash"],
+				"source": "https://stackoverflow.com/a/18642036/58049"
+		},
+		{
 				"id": 36,
 				"title": "Working with enums in Rails",
 				"content": "Specifying enum in model:<pre>enum: status [ :draft, :in_progress, :done ]</pre>Specifying enum in model with default values:<pre>#Note the change of square brackets to braces<br />enum: status { draft: 0, in_progress: 1, done: 2 }</pre>Specifying of default value in migration:<pre>add_column :tables, :status, :integer, default: 0</pre>",
