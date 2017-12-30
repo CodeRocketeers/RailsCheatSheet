@@ -1,5 +1,16 @@
 [
 		{
+				"id": 38,
+				"title": "Validate only when custom condition is met",
+				"content": "You can trigger a model validation only when the condition is met by two ways:<pre># using a Proc:<br />validates :email, presence: true, if: Proc.new { |user| user.approved? }<br /><br /># using a method:<br />validates :address, presence: true, if: :some_complex_condition<br /><br />def some_complex_condition<br />&nbsp;&nbsp;true # do your checking and return true or false<br />end</pre>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["validation"],
+				"source": "https://stackoverflow.com/a/20915135/58049"
+		},
+		{
 				"id": 37,
 				"title": "Adding custom flash message types",
 				"content": "Flash messages accept any symbol, but for <code>redirect_to</code> method only <code>:notice</code> and <code>:alert</code> symbols are accepted by default.<br />If you want to add another symbols, you can do so by:<pre>class ApplicationController < ActionController::Base<br />&nbsp;&nbsp;add_flash_types :error, ...</pre> and than you can use it like:<pre>redirect_to root_path, error: 'Some error'</pre>",
