@@ -1,5 +1,15 @@
 [
 		{
+				"id": 39,
+				"title": "Select helper for Rails model enum",
+				"content": "<pre><%= f.select :color, Product.colors.keys, {}, class: 'form-control' %><br /><br /># with I18n localization:<br /><%= f.select :color, Product.colors.keys.map { |key| [t(\"activerecord.attributes.product.colors.#{key}\"), key] }, {}, class: 'form-control' %></pre>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["enums"]
+		},
+		{
 				"id": 38,
 				"title": "Validate only when custom condition is met",
 				"content": "You can trigger a model validation only when the condition is met by two ways:<pre># using a Proc:<br />validates :email, presence: true, if: Proc.new { |user| user.approved? }<br /><br /># using a method:<br />validates :address, presence: true, if: :some_complex_condition<br /><br />def some_complex_condition<br />&nbsp;&nbsp;true # do your checking and return true or false<br />end</pre>",
