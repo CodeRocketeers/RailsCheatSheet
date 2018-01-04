@@ -1,5 +1,16 @@
 [
 		{
+				"id": 40,
+				"title": "Solving \"Incomplete response received from application\"",
+				"content": "When you deploy Rails application to <code>nginx / passenger</code> and you get <code>Incomplete response received from application</code> you don't have <code>secret_key_base</code> set:<ul><li>Navigate to root of your project and run <code>bundle exec rake secret RAILS_ENV=production</code></li><li>Open <code>config/secrets.yml</code> file and under <code>production</code> replace the value of the <code>secret_key_base</code> with the recently copied secret</li><li>run <code>passenger-config restart-app</code> and select the app you are fixing</li></ul>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["incomplete response"],
+				"source": "https://stackoverflow.com/a/44726811/58049"
+		},
+		{
 				"id": 39,
 				"title": "Select helper for Rails model enum",
 				"content": "<pre><%= f.select :color, Product.colors.keys, {}, class: 'form-control' %><br /><br /># with I18n localization:<br /><%= f.select :color, Product.colors.keys.map { |key| [t(\"activerecord.attributes.product.colors.#{key}\"), key] }, {}, class: 'form-control' %></pre>",
