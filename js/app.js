@@ -18,8 +18,8 @@ app.service('dataLoaderService', ['$http', function($http) {
 
     this.Load = function() {
         var result = { data: null };
-
-        return $http.get('datasource.json');
+				var stamp = Date.now();
+        return $http.get('datasource.json?v=' + stamp);
     }
 }]);
 
