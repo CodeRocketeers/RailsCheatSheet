@@ -1,5 +1,15 @@
 [
 		{
+				"id": 42,
+				"title": "Loading 'Lib' folder in production",
+				"content": "If you want to load <code>Lib</code> folder in production as well, use <pre>config.eager_load_paths += Dir[\"#{config.root}/lib/**/\"]</pre> instead of <pre>config.autoload_paths += Dir[\"#{config.root}/lib/**/\"]</pre>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["lib", "production"]
+		},
+		{
 				"id": 41,
 				"title": "Flash messages are showing twice",
 				"content": "If flash messages are showing twice, it is probably because the <code>render</code> method was called to show the view, but the flash messages are deleted only after calling the <code>redirect_to</code> method.<br />If you want the flash message to be shown after the <code>redirect_to</code> use <code>flash[]</code>. If you want to show it in the current request (after <code>render</code>) use <code>flash.now[]</code> instead.",
