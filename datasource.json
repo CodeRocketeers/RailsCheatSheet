@@ -1,5 +1,16 @@
 [
 		{
+				"id": 43,
+				"title": "Grouping items before printed with 'fields_for'",
+				"content": "If you have a collection of related entities and you want to print them grouped, you can use <code>field_for</code> like this:<pre>&lt;dl&gt;<br />&nbsp;&nbsp;<% @order.order_items.group_by { |oi| p.product }.each do |product, order_items_group| %><br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;<%= product.name %>&lt;/dt&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<%= f.fields_for :order_items_group, order_items_group.sort_by { |oi| oi.id } do |builder| %><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;$<%= builder.object.price %>,-&lt;/dd&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<% end %><br />&nbsp;&nbsp;<% end %><br />&lt;/dl&gt;</pre>",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "any",
+				"emoticon": "?",
+				"categories": ["fields_for", "group_by"],
+				"source": "https://stackoverflow.com/a/2625984/58049"
+		},
+		{
 				"id": 42,
 				"title": "Loading 'Lib' folder in production",
 				"content": "If you want to load <code>Lib</code> folder in production as well, use <pre>config.eager_load_paths += Dir[\"#{config.root}/lib/**/\"]</pre> instead of <pre>config.autoload_paths += Dir[\"#{config.root}/lib/**/\"]</pre>",
