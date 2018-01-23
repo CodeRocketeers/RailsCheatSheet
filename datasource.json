@@ -47,10 +47,10 @@
 				"title": "Solving \"Incomplete response received from application\"",
 				"content": "When you deploy Rails application to <code>nginx / passenger</code> and you get <code>Incomplete response received from application</code> you don't have <code>secret_key_base</code> set:<ul><li>Navigate to root of your project and run <code>bundle exec rake secret RAILS_ENV=production</code></li><li>Open <code>config/secrets.yml</code> file and under <code>production</code> replace the value of the <code>secret_key_base</code> with the recently copied secret</li><li>run <code>passenger-config restart-app</code> and select the app you are fixing</li></ul>",
 				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
-				"commit": "1",
+				"commit": "2",
 				"version": "any",
 				"emoticon": "?",
-				"categories": ["incomplete response"],
+				"categories": ["incomplete response", "secret_key_base"],
 				"source": "https://stackoverflow.com/a/44726811/58049"
 		},
 		{
