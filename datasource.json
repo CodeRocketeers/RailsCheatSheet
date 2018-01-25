@@ -1,5 +1,16 @@
 [
 		{
+				"id": 45,
+				"title": "Check if the user is active when using Devise",
+				"content": "If you want to add a sign to the user model holding the value if the user is active or not and you are using Devise, just add this to the user model:<pre>def active_for_authentication?<br />&nbsp;&nbsp;super && self.your_method_for_checking_active # i.e. super && self.is_active<br />end<br /><br />def inactive_message<br />&nbsp;&nbsp;'Sorry, this account has been deactivated.'<br />end",
+				"imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+				"commit": "1",
+				"version": "4.0.2+",
+				"emoticon": "?",
+				"categories": ["devise"],
+				"source": "https://stackoverflow.com/a/15866448/58049"
+		},
+		{
 				"id": 44,
 				"title": "Creating many-to-many join table",
 				"content": "Easy hint how to create many-to-many join table in migration:<pre>def change<br />&nbsp;&nbsp;# This is enough; you don't need to worry about order<br />&nbsp;&nbsp;create_join_table :categories, :users<br /><br />&nbsp;&nbsp;# If you want to add an index for faster querying through this join:<br />&nbsp;&nbsp;create_join_table :categories, :users do |t|<br />&nbsp;&nbsp;&nbsp;&nbsp;t.index :category_id<br />&nbsp;&nbsp;&nbsp;&nbsp;t.index :user_id<br />&nbsp;&nbsp;end<br />end</pre>",
