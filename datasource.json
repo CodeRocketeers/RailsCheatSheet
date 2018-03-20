@@ -1,5 +1,16 @@
 [
     {
+        "id": 47,
+        "title": "Check if all letters in string are uppercase",
+        "content": "Simply compare the string with itself uppercased:<pre>is_upper = str == str.uppcase</pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": ":O",
+        "categories": ["string", "comparsion", "uppercase", "downcase", "case sensitive"],
+        "source": "https://stackoverflow.com/a/8529614/58049"
+    },
+    {
         "id": 46,
         "title": "Allowing CORS in Rails --api",
         "content": "If you want to allow requests from the frontend part running on <code>http://localhost:8080</code>, in <code>Gemfile</code> uncomment <code>gem 'rack-cors'</code> and in <code>config/initializers/cors.rb</code> uncomment the following:<pre>Rails.application.config.middleware.insert_before 0, Rack::Cors do<br />&nbsp;&nbsp;allow do<br />&nbsp;&nbsp;&nbsp;&nbsp;origins 'localhost:8080'<br />&nbsp;&nbsp;&nbsp;&nbsp;resource '*',<br />&nbsp;&nbsp;&nbsp;&nbsp;headers: :any,methods: %i(get post put patch delete options head)<br />&nbsp;&nbsp;end<br />end</pre>Don't forget to set correct port to <code>8080</code>.",
