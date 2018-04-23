@@ -1,5 +1,16 @@
 [
     {
+        "id": 50,
+        "title": "Validation for numbers only positive",
+        "content": "<pre>validates :number, :numericality => { :greater_than_or_equal_to => 1 }</pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": ":O",
+        "categories": ["validation", "numbers", "positive", "negative"],
+        "source": "https://stackoverflow.com/a/11806544/58049"
+    },
+    {
         "id": 49,
         "title": "Adding uniqueness index over multiple columns",
         "content": "<pre>add_index :subscriptions, [:user_id, :content_id], unique: true</pre>",
