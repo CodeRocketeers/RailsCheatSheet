@@ -1,5 +1,16 @@
 [
     {
+        "id": 49,
+        "title": "Adding uniqueness index over multiple columns",
+        "content": "<pre>add_index :subscriptions, [:user_id, :content_id], unique: true</pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": ":O",
+        "categories": ["migrations", "database", "index"],
+        "source": "https://stackoverflow.com/a/4123925/58049"
+    },
+    {
         "id": 48,
         "title": "Running rake task on production server manually",
         "content": "<pre>RAILS_ENV=production bundle exec rake token:generate</pre>",
