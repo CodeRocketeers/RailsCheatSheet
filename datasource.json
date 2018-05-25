@@ -1,5 +1,15 @@
 [
     {
+        "id": 52,
+        "title": "Adding counter cache",
+        "content": "If you want to show the number of related records, there is a way how to do it without querying <code>COUNT(*)</code>.<br/>Imagine the example of <code>Order</code> and <code>Order Items</code>.<pre># in migratoins:<br />add_column :orders, :order_items_count, :integer, default: 0<br /><br /># in OrderItem model<br />class OrderItem < ApplicationRecord<br />&nbsp;&nbsp;belongs_to :order, counter_cache: true<br />end</pre>You can also easily update existing records:<pre>Order.find_each { |order| Order.reset_counters(order.id, :order_items) }</pre>Now you can use it like this: <code><%= @order.order_items_count %></code>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "any",
+        "emoticon": ":)",
+        "categories": ["counter cache", "caching"]
+    },
+    {
         "id": 51,
         "title": "form_with with namespaced routes",
         "content": "If you have namespaced routes like <code>localhost:3000/admin/products/1/edit</code> (where the <code>admin</code> is route namespace), you must pass the model to the form like this:<pre><%= form_with model: [:admin, @product] do |f| %></pre>",
