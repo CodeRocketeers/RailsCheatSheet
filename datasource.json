@@ -2,9 +2,9 @@
     {
         "id": 53,
         "title": "Converting decimal to hex and back",
-        "content": "Not that much Rails, but still:<pre>46910.to_s(16).upcase<br />'B73E'.to_i(16)</pre>",
+        "content": "Not that much Rails, but still:<pre>46910.to_s(16).upcase # => 'B73E'<br />'B73E'.to_i(16) # => 46910</pre>",
         "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
-        "commit": "1",
+        "commit": "2",
         "version": "none",
         "emoticon": ":)",
         "categories": ["hex", "conversion"]
