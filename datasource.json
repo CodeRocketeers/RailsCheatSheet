@@ -1,5 +1,16 @@
 [
     {
+        "id": 54,
+        "title": "Catching all the Foreign key violation errors on one place",
+        "content": "To catch all the <code>Foreign key violation</code> errors in the <code>application_controller.rb</code> do this:<pre>class ApplicationController < ActionController::Base<br />&nbsp;&nbsp;around_action :rescue_from_fk_contraint, only: [:destroy]<br /><br />&nbsp;&nbsp;def rescue_from_fk_contraint<br />&nbsp;&nbsp;&nbsp;&nbsp;begin<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield<br />&nbsp;&nbsp;&nbsp;&nbsp;rescue ActiveRecord::InvalidForeignKey<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flash[:danger] = 'This item cannot be deleted'<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;redirect_back(fallback_location: warehouse_root_path)<br />&nbsp;&nbsp;&nbsp;&nbsp;end<br />&nbsp;&nbsp;end<br />end</pre>If you want to make it work also for <code>accepts_nested_attributes_for</code> items, change the callback to <code>around_action :rescue_from_fk_contraint, only: [:destroy, :update]</code>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "none",
+        "emoticon": ":)",
+        "categories": ["Foreign key violation", "error"],
+        "source": "http://waiting-for-dev.github.io/blog/2015/02/03/rails-rescue-from-all-foreign-key-violations-at-once/"
+    },
+    {
         "id": 53,
         "title": "Converting decimal to hex and back",
         "content": "Not that much Rails, but still:<pre>46910.to_s(16).upcase # => 'B73E'<br />'B73E'.to_i(16) # => 46910</pre>",
