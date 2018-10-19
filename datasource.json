@@ -1,5 +1,16 @@
 [
     {
+        "id": 55,
+        "title": "Using scope in ActiveSupport concern",
+        "content": "To include scope to model via concern do: <pre>module Scopeable<br />&nbsp;&nbsp;extend ActiveSupport::Concern<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;def self.included(klass)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;klass.instance_eval do<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scope :my, -> { where(company_id: 1) }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br />&nbsp;&nbsp;&nbsp;&nbsp;end<br /><br />&nbsp;&nbsp;end<br />end</pre>",
+        "imageUrl": "https://avatars3.githubusercontent.com/u/17881279?v=3&u=5158f7401670ce7820f8d277ff6e1f41370abb59&s=140",
+        "commit": "1",
+        "version": "none",
+        "emoticon": ":)",
+        "categories": ["concern", "scope"],
+        "source": "https://stackoverflow.com/a/7324078/58049"
+    },
+    {
         "id": 54,
         "title": "Catching all the Foreign key violation errors on one place",
         "content": "To catch all the <code>Foreign key violation</code> errors in the <code>application_controller.rb</code> do this:<pre>class ApplicationController < ActionController::Base<br />&nbsp;&nbsp;around_action :rescue_from_fk_contraint, only: [:destroy]<br /><br />&nbsp;&nbsp;def rescue_from_fk_contraint<br />&nbsp;&nbsp;&nbsp;&nbsp;begin<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield<br />&nbsp;&nbsp;&nbsp;&nbsp;rescue ActiveRecord::InvalidForeignKey<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flash[:danger] = 'This item cannot be deleted'<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;redirect_back(fallback_location: warehouse_root_path)<br />&nbsp;&nbsp;&nbsp;&nbsp;end<br />&nbsp;&nbsp;end<br />end</pre>If you want to make it work also for <code>accepts_nested_attributes_for</code> items, change the callback to <code>around_action :rescue_from_fk_contraint, only: [:destroy, :update]</code>",
